@@ -19,10 +19,10 @@ export class AppComponent {
   title = 'Structure Directives';
 
   isLoggedIn: boolean = true;
-  check: boolean = true;
-  username: string = 'Umair';
+  check: boolean = false;
+  username: string = 'Uri';
 
-  names: string[] = ['umair', 'david', 'john'];
+  names: string[] = ['umair', 'david', 'john', 'uri'];
 
-  grade: string = 'D';
+  grade: string = 'A';
 }
