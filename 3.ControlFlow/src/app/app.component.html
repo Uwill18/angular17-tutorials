@@ -1,25 +1,27 @@
+<!--more conditional rendering and for-loop-->
+
 <!-- {{ title }}
 
 @if (a > b) {
-{{ a }} is greater than {{ b }}
+{{ a }} is GT than {{ b }}
 } @else if (b > a) {
-{{ a }} is less than {{ b }}
+{{ a }} is LT {{ b }}
 } @else {
-{{ a }} is equal to {{ b }}
+{{ a }} === {{ b }}
 }  -->
 
-<!-- @for (item of items; track item.id; let i = $index; let total = $count) {
-{{ i }}{{ item.name }}
-} -->
+@for (item of items; track item.id; let i = $index; let total = $count) {
+{{ i + 1 }}. {{ item.name }} <br/>
+}
 
 <!-- $first, $last, $even, $odd -->
 
 @switch (grade) { @case ('A') {
-<p>Excellent</p>
+<p>Excellent!!</p>
 } @case ('B') {
-<p>Good</p>
+<p>Good!</p>
 } @case ('C') {
-<p>Bad</p>
+<p>Bad...</p>
 } @default {
-<p>Unknown</p>
+<p>Unknown??</p>
 } }

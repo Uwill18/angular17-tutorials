@@ -16,10 +16,10 @@ export class AppComponent {
   c: number = 4;
 
   items = [
-    { id: 1, name: 'item1' },
-    { id: 2, name: 'item2' },
-    { id: 3, name: 'item3' },
+    { id: 1, name: 'First Item' },
+    { id: 2, name: 'Second Item' },
+    { id: 3, name: 'Third Item' },
   ];
 
-  grade: string = 'C';
+  grade: string = 'A';
 }
