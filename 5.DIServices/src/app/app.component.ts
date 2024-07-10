@@ -13,9 +13,12 @@ import { NgFor } from '@angular/common';
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
-  data: string[] = [];
-  posts: Data[] = [];
+  data: string[] = [];//array of strings
+  posts: Data[] = []; //array of data
 
+
+  //dataService : DataService creates the dataService object
+  //consequently in this constructor the getData() method is called
   constructor(private dataService: DataService) {
     this.data = this.dataService.getData();
   }
@@ -23,7 +26,7 @@ export class AppComponent {
   ngOnInit() {
     this.dataService.getPosts().subscribe({
       next: (response: Data[]) => {
-        this.posts = response;
+        this.posts = response; //response from api of data array is being stored here
       },
       error: (error: Error) => {
         console.log(error);

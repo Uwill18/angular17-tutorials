@@ -1,7 +1,9 @@
-<!-- <h1>{{ title | lowercase }}</h1>
-<h1>{{ title | uppercase }}</h1> -->
+<!--pipes can directly manipulate the data-->
+<h1>{{ title | lowercase }}</h1>
+<h1>{{ title | uppercase }}</h1>
 
-<!-- <div>
+<!--pipes are used here to format the data-->
+<div>
   <p>Today is {{ today }}</p>
   <p>Today is {{ today | date }}</p>
   <p>Today is {{ today | date : "fullDate" | uppercase }}</p>
@@ -10,11 +12,14 @@
   <p>Today is {{ today | date : "long" }}</p>
   <p>Today is {{ today | date : "full" }}</p>
   <p>Today is {{ today | date : "h:mm:s" }}</p>
-</div> -->
+</div>
 
+<!--default currency is dollars-->
 <p>{{ currency | currency }}</p>
-<p>{{ currency | currency : "EUR" : "symbol" : "1.1-4" }}</p>
+<!--range of digits shows the amount of digits-->
+<p>{{ currency | currency : "EUR" : "symbol" : "1.1-3" }}</p>
 
 <p>{{ currency | percent : "" }}</p>
 
+<!--ng g pipe command generates a new pipe-->
 <p>{{ title | append : "new text" | uppercase }}</p>
